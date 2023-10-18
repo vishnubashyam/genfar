@@ -1,0 +1,13 @@
+module load python/anaconda/3.9.2
+module load cuda/11.2
+python3 -m pip install virtualenv
+python3 -m virtualenv torch_lightning_env
+source env/bin/activate
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+
+
+
+ NVIDIA-SMI 460.73.01    Driver Version: 460.73.01    CUDA Version: 11.2  
+Python 3.6.8
+>>> torch.__version__
+'1.11.0+cu113'
